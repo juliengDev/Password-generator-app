@@ -24,13 +24,12 @@
   height: 8px;
   border-radius: 5px;
 }
-
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 28px;
   height: 28px;
-  background-color: var(--color-veryDarkGrey);
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid var(--color-neonGreen);
@@ -41,7 +40,7 @@
 .slider::-moz-range-thumb {
   width: 28px;
   height: 28px;
-  background-color: var(--color-veryDarkGrey);
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid var(--color-neonGreen);
@@ -55,4 +54,14 @@
 
 .slider-value {
   color: var(--color-neonGreen);
+}
+
+.slider:active::-moz-range-thumb,
+.slider:focus::-moz-range-thumb {
+  background-color: black;
+}
+
+.slider:active::-webkit-slider-thumb,
+.slider:focus::-webkit-slider-thumb {
+  background-color: black;
 }

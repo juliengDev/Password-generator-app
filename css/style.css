@@ -217,7 +217,7 @@ body {
   appearance: none;
   width: 28px;
   height: 28px;
-  background-color: var(--color-veryDarkGrey);
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid var(--color-neonGreen);
@@ -228,7 +228,7 @@ body {
 .slider::-moz-range-thumb {
   width: 28px;
   height: 28px;
-  background-color: var(--color-veryDarkGrey);
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid var(--color-neonGreen);
@@ -242,6 +242,16 @@ body {
 
 .slider-value {
   color: var(--color-neonGreen);
+}
+
+.slider:active::-moz-range-thumb,
+.slider:focus::-moz-range-thumb {
+  background-color: black;
+}
+
+.slider:active::-webkit-slider-thumb,
+.slider:focus::-webkit-slider-thumb {
+  background-color: black;
 }
 
 .password__encryption-options__checkbox {
@@ -312,7 +322,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.9rem 3.2rem;
+  padding: 2.8rem 3.2rem;
   margin-bottom: 2.4rem;
   background-color: var(--color-darkGrey);
 }
