@@ -7,7 +7,7 @@ export default defineConfig({
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: true,
-    assetsInlineLimit: 0, // Ceci forcera Vite à toujours créer un fichier séparé pour les assets
+    assetsInlineLimit: 0,
     rollupOptions: {
       output: {
         assetFileNames: "assets/[name].[ext]",
@@ -21,6 +21,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": "/src",
+      fonts: "/public/fonts",
     },
   },
 });

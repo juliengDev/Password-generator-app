@@ -5,14 +5,89 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Frontend Mentor | Project Name</title>
+  <meta name="description" content="Password Generator application for creating strong and customizable passwords.">
+  <title>Julien Gilbert - Password Generator</title>
+  <link rel="stylesheet" href="./css/style.css">
   <script type="module" defer src="/src/main.ts"></script>
 </head>
 
 <body>
-  <main>
-    <div id="app"></div>
+  <main class="container">
+
+    <div class="password">
+      <h1 class="ft-heading-m">Password Generator</h1>
+      <section aria-labelledby="password-output-label">
+        <div class="password__output-label" role="alert" aria-live="polite" id="password-output">
+          <p class="password__output-label__key ft-heading-l" id="password-display">PTx1f5DaFX</p>
+          <button class="password__output-label__icon btn" aria-label="Copier le mot de passe"
+            title="Copier le mot de passe">
+            <svg aria-hidden="true" focusable="false" width="21" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+                fill="#A4FFAF" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <div class="generate-password-container">
+        <section aria-labelledby="encryption-options">
+          <div class="password__encryption-options">
+            <div class="password__encryption-options__container">
+              <label class="ft-body-m" for="char-length-slider">Character Length</label>
+              <output id="sliderValue" class="ft-heading-l slider-value" for="char-length-slider"></output>
+            </div>
+
+            <div class="slider-container">
+              <input class="slider" type="range" id="char-length-slider" name="char-length" min="8" max="32" value="16"
+                aria-valuemin="8" aria-valuemax="32" aria-valuenow="16">
+            </div>
+          </div>
+
+          <div class="password__encryption-options__checkbox">
+            <div class="input-checkbox-container">
+              <input type="checkbox" id="include-uppercase" name="uppercase">
+              <label class="ft-body-m" for="include-uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="input-checkbox-container">
+              <input type="checkbox" id="include-lowercase" name="lowercase">
+              <label class="ft-body-m" for="include-lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="input-checkbox-container">
+              <input type="checkbox" id="include-numbers" name="numbers">
+              <label class="ft-body-m" for="include-numbers">Include Numbers</label>
+            </div>
+            <div class="input-checkbox-container">
+              <input type="checkbox" id="include-symbols" name="symbols">
+              <label class="ft-body-m" for="include-symbols">Include Symbols</label>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="password-strength-label">
+          <h2 id="password-strength-label">FORCE</h2>
+          <div id="strength-display" aria-live="polite">
+            <span id="strength-text">MOYEN</span>
+            <div class="strength-bars" aria-hidden="true">
+              <div class="bar filled"></div>
+              <div class="bar filled"></div>
+              <div class="bar filled"></div>
+              <div class="bar empty"></div>
+            </div>
+          </div>
+        </section>
+
+        <button type="button" id="generate-password">
+          Générer
+          <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
   </main>
 
   <footer class="attribution">
@@ -24,3 +99,9 @@
 </body>
 
 </html>
+
+<!-- 
+
+
+Strength
+Generate -->
