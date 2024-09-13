@@ -52,9 +52,71 @@
       }
     }
   }
+  &-strength-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.2rem;
+    padding: 2.5rem 3.2rem 2.3rem;
+    background-color: var(--color-veryDarkGrey);
+    &__title {
+      color: var(--color-grey);
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 1.55rem;
+    }
+    & span {
+      color: var(--color-almostWhite);
+    }
+    & .strength-bars {
+      display: flex;
+      gap: 0.8rem;
+    }
+    & .bar {
+      width: 10px;
+      height: 28px;
+    }
+    & .filled {
+      background-color: var(--color-yellow);
+    }
+
+    & .empty {
+      border: 2px solid var(--color-almostWhite);
+    }
+  }
+  &__generateBtn {
+    width: 100%;
+    padding: 2.1rem 0;
+    background-color: var(--color-neonGreen);
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.4rem;
+    }
+    & .btn-title {
+      text-transform: uppercase;
+      color: var(--color-darkGrey);
+    }
+    &:hover {
+      cursor: pointer;
+      border: 2px solid var(--color-neonGreen);
+      background-color: var(--color-darkGrey);
+      & .btn-title {
+        color: var(--color-almostWhite);
+      }
+
+      & .btn-icon path {
+        fill: var(--color-almostWhite);
+      }
+    }
+  }
 }
 
 .generate-password-container {
+  text-transform: uppercase;
   padding: 3.2rem;
   background-color: var(--color-darkGrey);
 }

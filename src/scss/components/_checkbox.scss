@@ -31,10 +31,6 @@
   background-size: 14px;
 }
 
-.input-checkbox-container input[type="checkbox"]:hover {
-  background-color: rgba(164, 255, 175, 0.1);
-}
-
 .input-checkbox-container input[type="checkbox"]:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(164, 255, 175, 0.5);

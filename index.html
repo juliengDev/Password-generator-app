@@ -64,10 +64,10 @@
           </div>
         </section>
 
-        <section aria-labelledby="password-strength-label">
-          <h2 id="password-strength-label">FORCE</h2>
-          <div id="strength-display" aria-live="polite">
-            <span id="strength-text">MOYEN</span>
+        <section class="password-strength-label" aria-labelledby="password-strength-label">
+          <h2 class="ft-body-m password-strength-label__title" id="password-strength-label">Strength</h2>
+          <div class="password-strength-label__container" id="strength-display" aria-live="polite">
+            <span class="ft-heading-m" id="strength-text">MOYEN</span>
             <div class="strength-bars" aria-hidden="true">
               <div class="bar filled"></div>
               <div class="bar filled"></div>
@@ -77,12 +77,17 @@
           </div>
         </section>
 
-        <button type="button" id="generate-password">
-          Générer
-          <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z" />
-          </svg>
+        <button class="password__generateBtn  btn" type="button" id="generate-password">
+          <div class="password__generateBtn__container">
+            <span class="btn-title ft-body-m">
+              Generate
+            </span>
+            <svg class="btn-icon" aria-hidden="true" focusable="false" width="12" height="12"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+            </svg>
+          </div>
+
         </button>
       </div>
 
@@ -99,9 +104,3 @@
 </body>
 
 </html>
-
-<!-- 
-
-
-Strength
-Generate -->

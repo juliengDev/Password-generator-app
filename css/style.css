@@ -160,7 +160,7 @@ body {
 }
 
 .btn {
-  border: none;
+  border: 2px solid transparent;
   margin: 0;
   padding: 0;
   width: auto;
@@ -277,10 +277,6 @@ body {
   background-size: 14px;
 }
 
-.input-checkbox-container input[type=checkbox]:hover {
-  background-color: rgba(164, 255, 175, 0.1);
-}
-
 .input-checkbox-container input[type=checkbox]:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(164, 255, 175, 0.5);
@@ -291,14 +287,14 @@ body {
 }
 
 .attribution {
-  margin: 1.6rem 0 6rem;
+  margin: 1.6rem 0;
   font-size: 1.1rem;
   text-align: center;
-  color: var(--color-wenge-brown);
+  color: var(--color-almostWhite);
 }
 .attribution__credit {
   font-weight: 800;
-  color: var(--color-dark-raspberry) !important;
+  color: var(--color-neonGreen) !important;
 }
 
 .password {
@@ -354,8 +350,68 @@ body {
 .password__encryption-options__checkbox label {
   color: var(--color-almostWhite);
 }
+.password-strength-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+  padding: 2.5rem 3.2rem 2.3rem;
+  background-color: var(--color-veryDarkGrey);
+}
+.password-strength-label__title {
+  color: var(--color-grey);
+}
+.password-strength-label__container {
+  display: flex;
+  align-items: center;
+  gap: 1.55rem;
+}
+.password-strength-label span {
+  color: var(--color-almostWhite);
+}
+.password-strength-label .strength-bars {
+  display: flex;
+  gap: 0.8rem;
+}
+.password-strength-label .bar {
+  width: 10px;
+  height: 28px;
+}
+.password-strength-label .filled {
+  background-color: var(--color-yellow);
+}
+.password-strength-label .empty {
+  border: 2px solid var(--color-almostWhite);
+}
+.password__generateBtn {
+  width: 100%;
+  padding: 2.1rem 0;
+  background-color: var(--color-neonGreen);
+}
+.password__generateBtn__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.password__generateBtn .btn-title {
+  text-transform: uppercase;
+  color: var(--color-darkGrey);
+}
+.password__generateBtn:hover {
+  cursor: pointer;
+  border: 2px solid var(--color-neonGreen);
+  background-color: var(--color-darkGrey);
+}
+.password__generateBtn:hover .btn-title {
+  color: var(--color-almostWhite);
+}
+.password__generateBtn:hover .btn-icon path {
+  fill: var(--color-almostWhite);
+}
 
 .generate-password-container {
+  text-transform: uppercase;
   padding: 3.2rem;
   background-color: var(--color-darkGrey);
 }
