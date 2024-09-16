@@ -5,6 +5,16 @@ const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const numberChars = "0123456789";
 const symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
 
+/**
+ * Generates a random password based on the specified criteria.
+ *
+ * @param length The length of the password to generate.
+ * @param includeUppercase Whether to include uppercase characters in the password.
+ * @param includeLowercase Whether to include lowercase characters in the password.
+ * @param includeNumbers Whether to include numbers in the password.
+ * @param includeSymbols Whether to include symbols in the password.
+ * @returns The randomly generated password.
+ */
 function generatePassword(
   length: number,
   includeUppercase: boolean,
@@ -28,7 +38,17 @@ function generatePassword(
 
   return password;
 }
-
+/**
+ * Evaluates the strength of a password based on the following criteria:
+ * - At least 12 characters long
+ * - Contains at least one uppercase letter
+ * - Contains at least one lowercase letter
+ * - Contains at least one digit
+ * - Contains at least one special character
+ *
+ * @param password The password to evaluate its strength
+ * @returns A string indicating the strength of the password: "TOO WEAK!", "WEAK", "MEDIUM", or "STRONG"
+ */
 function evaluatePasswordStrength(password: string): string {
   let strength = 0;
   if (password.length >= 12) strength++;
@@ -42,7 +62,12 @@ function evaluatePasswordStrength(password: string): string {
   if (strength === 4) return "MEDIUM";
   return "STRONG";
 }
-
+/**
+ * Updates the strength bars based on the provided strength level.
+ *
+ * @param strength The strength level to update the bars with.
+ * @returns void
+ */
 function updateStrengthBars(strength: string): void {
   const strengthText = document.getElementById("strength-text");
   const bars = document.querySelectorAll<HTMLDivElement>(".strength-bars .bar");
@@ -58,6 +83,11 @@ function updateStrengthBars(strength: string): void {
 
   const config = strengthConfig[strength] || { color: "", filledBars: 0 };
 
+  /**
+   * Updates the strength bars based on the configuration provided.
+   * Iterates over each bar element, removes existing classes, resets background color,
+   * and applies new classes and background color based on the filledBars property of the config object.
+   */
   bars.forEach((bar, index) => {
     bar.classList.remove("filled", "empty");
     bar.style.backgroundColor = "";
@@ -70,13 +100,22 @@ function updateStrengthBars(strength: string): void {
     }
   });
 }
+/**
+ * Updates the password display element with the provided password.
+ *
+ * @param password - The new password to be displayed.
+ * @returns void
+ */
 function updatePasswordOutput(password: string): void {
   const outputElement = document.getElementById("password-display");
   if (outputElement) {
     outputElement.textContent = password;
   }
 }
-
+/**
+ * Copies the text content of the password display element to the clipboard.
+ * Shows a "COPIED" message temporarily and then hides it after 2 seconds.
+ */
 function copyToClipboard(): void {
   const outputElement = document.getElementById("password-display");
   if (outputElement) {
@@ -99,7 +138,13 @@ function copyToClipboard(): void {
     }, 2000);
   }
 }
-
+/**
+ * Initializes the password generator functionality by setting up event listeners for the character length slider,
+ * the generate password button, and the copy password button.
+ * Updates the slider value display based on the slider input and generates a password based on the selected options
+ * when the generate button is clicked. Also evaluates the password strength and updates the strength bars accordingly.
+ * Lastly, allows the user to copy the generated password to the clipboard when the copy button is clicked.
+ */
 function initializePasswordGenerator(): void {
   const slider = document.getElementById(
     "char-length-slider"
@@ -112,7 +157,7 @@ function initializePasswordGenerator(): void {
     slider.addEventListener("input", () => {
       sliderValue.textContent = slider.value;
     });
-    // Initialiser la valeur affichée
+
     sliderValue.textContent = slider.value;
   }
 

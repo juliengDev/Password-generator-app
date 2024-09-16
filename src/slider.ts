@@ -2,7 +2,7 @@ const slider = document.getElementById(
   "char-length-slider"
 ) as HTMLInputElement | null;
 const sliderValue = document.getElementById(
-  "sliderValue"
+  "slider-value"
 ) as HTMLElement | null;
 
 function updateSlider(): void {

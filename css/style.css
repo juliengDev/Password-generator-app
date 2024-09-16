@@ -314,6 +314,11 @@ body {
   flex-direction: column;
   margin-top: 13.3rem;
 }
+@media only screen and (max-width: 23.4375em) {
+  .password {
+    margin: 6.4rem 1.6rem 0;
+  }
+}
 .password h1 {
   text-align: center;
   margin-bottom: 3.1rem;
