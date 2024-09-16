@@ -19,14 +19,17 @@
       <section aria-labelledby="password-output-label">
         <div class="password__output-label" role="alert" aria-live="polite" id="password-output">
           <p class="password__output-label__key ft-heading-l" id="password-display"></p>
-          <button class="password__output-label__icon btn" aria-label="Copier le mot de passe"
-            title="Copier le mot de passe">
-            <svg aria-hidden="true" focusable="false" width="21" height="24" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
-                fill="#A4FFAF" />
-            </svg>
-          </button>
+          <div class="password__output-label__container">
+            <p class="password__output-label__copied body-m hidden">COPIED</p>
+            <button id="copy-password" class="password__output-label__icon btn" aria-label="Copier le mot de passe"
+              title="Copier le mot de passe">
+              <svg aria-hidden="true" focusable="false" width="21" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+                  fill="#A4FFAF" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -35,12 +38,12 @@
           <div class="password__encryption-options">
             <div class="password__encryption-options__container">
               <label class="ft-body-m" for="char-length-slider">Character Length</label>
-              <output id="sliderValue" class="ft-heading-l slider-value" for="char-length-slider"></output>
+              <output id="slider-value" class="ft-heading-l slider-value" for="char-length-slider"></output>
             </div>
 
             <div class="slider-container">
-              <input class="slider" type="range" id="char-length-slider" name="char-length" min="8" max="32" value="16"
-                aria-valuemin="8" aria-valuemax="32" aria-valuenow="16">
+              <input class="slider" type="range" id="char-length-slider" name="char-length" min="8" max="16" value="10"
+                aria-valuemin="8" aria-valuemax="16" aria-valuenow="10">
             </div>
           </div>
 
@@ -66,12 +69,12 @@
         <section class="password-strength-label" aria-labelledby="password-strength-label">
           <h2 class="ft-body-m password-strength-label__title" id="password-strength-label">Strength</h2>
           <div class="password-strength-label__container" id="strength-display" aria-live="polite">
-            <span class="ft-heading-m" id="strength-text">MEDIUM</span>
+            <span class="ft-heading-m" id="strength-text"></span>
             <div class="strength-bars" aria-hidden="true">
-              <div class="bar filled"></div>
-              <div class="bar filled"></div>
-              <div class="bar filled"></div>
-              <div class="bar empty"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </div>
           </div>
         </section>

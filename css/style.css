@@ -326,6 +326,12 @@ body {
   margin-bottom: 2.4rem;
   background-color: var(--color-darkGrey);
 }
+.password__output-label__container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  color: var(--color-neonGreen);
+}
 .password__output-label__key {
   color: var(--color-almostWhite);
 }
