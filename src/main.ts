@@ -36,8 +36,30 @@ function generatePassword(
     password += allChars[randomIndex];
   }
 
+  // const passwordDisplay = document.getElementById(
+  //   "password-display"
+  // ) as HTMLElement;
+  // if (passwordDisplay) {
+  //   passwordDisplay.style.color = "color: var(--color-almostWhite)";
+  // }
+
   return password;
 }
+/**
+ * Updates the password display element with the provided password.
+ *
+ * @param password - The new password to be displayed
+ */
+function updatePasswordDisplay(password: string) {
+  const passwordDisplay = document.getElementById(
+    "password-display"
+  ) as HTMLElement;
+  if (passwordDisplay) {
+    passwordDisplay.textContent = password;
+    passwordDisplay.style.color = "var(--color-almostWhite)";
+  }
+}
+
 /**
  * Evaluates the strength of a password based on the following criteria:
  * - At least 12 characters long
@@ -185,7 +207,9 @@ function initializePasswordGenerator(): void {
           includeNumbers,
           includeSymbols
         );
+
         updatePasswordOutput(password);
+        updatePasswordDisplay(password);
         const strength = evaluatePasswordStrength(password);
         updateStrengthBars(strength);
       }
