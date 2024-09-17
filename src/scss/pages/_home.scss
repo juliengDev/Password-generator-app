@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.8rem 3.2rem;
+    padding: 1.9rem 3.2rem;
     margin-bottom: 2.4rem;
     background-color: var(--color-darkGrey);
     &__container {
@@ -126,7 +126,7 @@
 }
 
 .generate-password-container {
-  text-transform: uppercase;
-  padding: 3.2rem;
+  text-transform: capitalize;
+  padding: 2.8rem 3.2rem 3.2rem;
   background-color: var(--color-darkGrey);
 }
