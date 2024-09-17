@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/Password-generator-app/",
+  base: "/",
   build: {
     outDir: "dist",
     assetsDir: "assets",
