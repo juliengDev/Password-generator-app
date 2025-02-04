@@ -1,14 +1,12 @@
 # Password Generator App
 
-![Design preview for the Password Generator App](./preview.jpg)
+![Design preview for the Password Generator App](./design/desktop-preview.jpg)
 
 ## Overview
 
 This project is an **interactive password generator app** that allows users to create strong passwords based on selected criteria. It includes a **strength indicator**, a **clipboard copy feature**, and a **responsive design** for an optimal user experience.
 
----
-
-### 🔑 Key Features
+### Key Features
 
 - **Customizable password generation** based on user-selected options  
 - **Clipboard copy functionality** for quick password usage  
@@ -16,9 +14,7 @@ This project is an **interactive password generator app** that allows users to c
 - **Responsive design** ensuring optimal display on all devices  
 - **Hover and focus states** for interactive elements  
 
----
-
-## 📐 How It Works
+## How It Works
 
 1. **Select Password Options**  
    - Choose **length**, **uppercase/lowercase letters**, **numbers**, and **special characters**  
@@ -31,15 +27,11 @@ This project is an **interactive password generator app** that allows users to c
 3. **Copy to Clipboard**  
    - A **single click** copies the generated password for easy use  
 
----
+## Live Demo
 
-## 🚀 Live Demo
+[Password Generator App](https://juliengdev-password-generator.netlify.app/)
 
-[Password Generator App](https://juliengdev-password-generator-app.netlify.app/)
-
----
-
-## 🛠 Built With
+## Built With
 
 - **TypeScript** for strong typing and maintainability  
 - **Semantic HTML5** for structured content  
@@ -47,9 +39,7 @@ This project is an **interactive password generator app** that allows users to c
 - **CSS Customization** for interactive elements like sliders and checkboxes  
 - **Clipboard API** for seamless copy functionality  
 
----
-
-## 🤓 What I Learned
+## What I Learned
 
 This project helped me **refine my front-end skills** while implementing **custom logic from scratch**. Key takeaways include:
 
@@ -57,8 +47,6 @@ This project helped me **refine my front-end skills** while implementing **custo
 - **Improving code documentation** with structured comments and docstrings  
 - **Enhancing UI/UX** with advanced **CSS effects** for hover and active states  
 - **Deepening my understanding of TypeScript** for better maintainability  
-
----
 
 ### Code Example: Password Generation Logic
 ```typescript
@@ -77,9 +65,7 @@ const generatePassword = (length: number, options: string[]): string => {
 };
 ```
 
----
-
-## ✨ Continued Development
+## Continued Development
 
 Future improvements planned:
 - Auto-save feature to remember user preferences
@@ -87,9 +73,7 @@ Future improvements planned:
 - Dark mode toggle for improved accessibility
 - Integration with a password security API for real-time validation
 
----
-
-## 📦 Installation
+## Installation
 
 To run this project locally, follow these steps:
 
@@ -119,21 +103,17 @@ npm run build
 npm run preview
 ```
 
----
+## Useful Resources
 
-## 📚 Useful Resources
-
-- [GitHub Repository: Password Generator App](https://github.com/juliengDev/Password-generator-app)
+- [GitHub Repository: Password Generator App](#)
 - [MDN Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) - Used for copy-to-clipboard functionality
 - [CSS-Tricks: Custom Range Sliders](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) - Helped with customizing sliders
 - [OWASP Password Guidelines](https://owasp.org/www-community/controls/Authentication_Cheat_Sheet#password-creation-guidelines) - Best practices for password security
 
----
+## Author
 
-## 👨‍💻Author
-
-- **Portfolio** - [Julien Gilbert](https://juliengilbert.com/)
-- **GitHub** - [@juliengDev](https://github.com/juliengDev)
-- **LinkedIn** - [Julien Gilbert](https://www.linkedin.com/in/julien-gilbert-reactjs/)
+- **Portfolio** - [Julien Gilbert](#)
+- **GitHub** - [@juliengDev](#)
+- **LinkedIn** - [Julien Gilbert](#)
 
 *Creating secure passwords has never been easier! Try it now and enhance your digital security.* 🚀
